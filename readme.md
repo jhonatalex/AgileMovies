@@ -7,5 +7,5 @@ Proyecto como ejemplo para manejar los componentes de react-native y el consumo 
 # Algunas Capturas de la APP
 
 <p align="center">
-  <img src="https://github.com/jhonatalex/AgileMovies/blob/master/screen.png" width="500" title="hover text">
+  <img src="https://github.com/jhonatalex/AgileMovies/blob/master/screen.png" width="800" title="hover text">
 </p>
