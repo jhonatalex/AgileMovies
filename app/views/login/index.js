@@ -41,7 +41,7 @@ class Login extends Component{
 
 
         return (
-            //<Loading loading={loading}>
+        
 
         <View style={styles.container}>
 
@@ -54,7 +54,7 @@ class Login extends Component{
                 
                 </Image>
 
-                </Loading>
+            </Loading>
             </View>
        
 
@@ -135,7 +135,7 @@ class Login extends Component{
 
         </View>
 
-        //</Loading>
+     
     )};
 
 }
