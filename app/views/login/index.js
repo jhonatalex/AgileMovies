@@ -97,10 +97,10 @@ class Login extends Component{
                         }else{
                     
                             const user = {
-                                //username: Usuario,
-                                //password: Password
-                               username: "agilesoft",
-                              password: "agile1234"
+                                username: Usuario,
+                                password: Password
+                               //username: "agilesoft",
+                              //password: "agile1234"
                             };
                         
                    
