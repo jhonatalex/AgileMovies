@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import {View,StyleSheet,Text,SafeAreaView , ScrollView,TouchableOpacity,  FlatList, Image,Alert,}  from 'react-native';
+import {View,StyleSheet,Text,Button,SafeAreaView , ScrollView,TouchableOpacity,  FlatList, Image,Alert,}  from 'react-native';
 import axios from 'axios';
 
 
@@ -32,9 +32,14 @@ class Details extends Component{
         this.setState({filmsSelected});
     
 
-        const token = this.props.route.params.token
-        const tokenRefresh = this.props.route.params.tokenRefresh
-    
+        const tokenRefresh= this.props.route.params.tokenRefresh;
+        this.setState({tokenRefresh});
+
+
+        const token= this.props.route.params.token;
+        this.setState({token});
+        
+   
 
         this.getDAtaApi (token,tokenRefresh,filmsSelected );
         
@@ -93,14 +98,18 @@ class Details extends Component{
 render(){
 
     const {filmsSelected} = this.state;
-
     const {actors} = this.state;
+    const {token} = this.state;
 
   return (
 
   
     <View style={styles.container} >
     
+                <Button style={{ color:'black'}}
+                title="Volver"
+                onPress={() => this.props.navigation.navigate('Home',{token})}
+                />
             <Text style={styles.titlePopular}>{filmsSelected.title}</Text>
         
                 <Image

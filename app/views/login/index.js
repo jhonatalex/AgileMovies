@@ -85,7 +85,7 @@ class Login extends Component{
                     style={styles.button}
                     onPress={()=>{
 
-                        if(Usuario==null){
+                         if(Usuario==null){
                             Alert.alert('Mensaje','Introduzca un Usuario',[
                                 {text:'Aceptar', }
                             ]);        
@@ -97,10 +97,10 @@ class Login extends Component{
                         }else{
                     
                             const user = {
-                                username: Usuario,
-                                password: Password
-                               // username: "agilesoft",
-                                //password: "agile1234"
+                                //username: Usuario,
+                                //password: Password
+                               username: "agilesoft",
+                              password: "agile1234"
                             };
                         
                    
@@ -119,7 +119,7 @@ class Login extends Component{
 
 
                             
-                       }
+                       } 
 
                         
 

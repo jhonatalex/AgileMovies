@@ -7,7 +7,6 @@ import axios from 'axios';
 //componentes
 import Loading from '../../components/loading';
 
-
 //styles
 import {styles } from './styles';
 import userImage from '../../assets/icon/user.png';
@@ -40,11 +39,10 @@ class Home extends Component{
 
 
     }
+    
 
     componentDidMount() {
 
-
-   
     const users = this.props.route.params.token.data.user
     this.setState({users});
 
@@ -146,7 +144,6 @@ class Home extends Component{
                     this.props.navigation.navigate('Login')
                 }}
             
-            
             ]));
                               
     };    
@@ -167,13 +164,22 @@ class Home extends Component{
 
     handleInfinitePremiers=()=>{
         const {films}=this.state;
-        this.setState({ films:  films.concat( films)});
+        const listaInfinita=[];
+        
+       
+        films.forEach(function callback(value, index) {
+            value.id=index;
+            listaInfinita.push(value);;
+          });
+
+        //this.setState({ films:  films});
+        this.setState({ films:  films.concat(films)});
     } 
    
 
-
 render(){
-
+   
+    
     const {
         users,
         imageBaseUrl,
@@ -188,7 +194,7 @@ render(){
  
   return (
         <View style={styles.container}>
-          
+
           <View style={styles.headers}>
             <Text style={styles.title}> Hola  {users.firstName} {users.lastName} </Text>
             <Image  style={styles.imgheader} source={userImage}></Image>

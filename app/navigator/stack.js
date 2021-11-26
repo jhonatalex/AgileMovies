@@ -3,6 +3,7 @@ import React  from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
+import {View,Style,Button,Alert,}  from 'react-native';
 //SCREEN
 import Routes from './stackRoutes'
 
@@ -36,7 +37,7 @@ function AppStack() {
                     name="Details" 
                     component={Routes.Details} 
                     options={{
-                        headerShown:true,
+                        headerShown:false,
                         headerTitleAlign:'center',
                         headerStyle:{
                         backgroundColor:'#CCD1D1'    
